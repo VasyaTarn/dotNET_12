@@ -10,8 +10,10 @@ namespace dotNET_12
     {
         static void Main(string[] args)
         {
+            List<Product> products = new List<Product>();
+
             Product p = new Product("name1", 11, 22, "text1", 33);
-            Check check = new Check();
+            Check check = new Check(products);
             check.AddProduct(p);
             check.PrintAll();
         }

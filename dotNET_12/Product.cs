@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace dotNET_12
 {
-    class Product
+    public struct Product
     {
         private string name;
         private double cost;

@@ -6,35 +6,35 @@ using System.Threading.Tasks;
 
 namespace dotNET_12
 {
-    class Check
+    public struct Check
     {
-        public List<Product> tovars;
-        public Check()
+        public List<Product> products;
+        public Check(List<Product> products)
         {
-            this.tovars = new List<Product>();
+            this.products = products;
         }
         public Product this[int index]
         {
             set
             {
-                tovars[index] = value;
+                products[index] = value;
             }
             get
             {
-                return tovars[index];
+                return products[index];
             }
         }
         public void AddProduct(Product t)
         {
-            tovars.Add(t);
+            products.Add(t);
         }
         public void PrintAll()
         {
             Console.BackgroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Black;
-            for (int i = 0; i < tovars.Count; i++)
+            for (int i = 0; i < products.Count; i++)
             {
-                tovars[i].PrintItem();
+                products[i].PrintItem();
             }
             Console.ResetColor();
         }
